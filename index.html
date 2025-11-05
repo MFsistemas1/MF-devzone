@@ -8,44 +8,75 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #121212;
+      background: url('https://raw.githubusercontent.com/mfsistemas1/MF-devzone/main/logo.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #e0e0e0;
     }
+
     header {
-      background-color: #1f1f1f;
+      background-color: rgba(31, 31, 31, 0.85);
       color: #00ff88;
       padding: 1em;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5em;
     }
+
     header p {
       margin: 5px 0 0;
       font-style: italic;
       color: #a0a0a0;
     }
+
     nav {
-      background-color: #222;
+      background-color: rgba(34, 34, 34, 0.85);
       display: flex;
       justify-content: center;
       border-top: 2px solid #00ff88;
       border-bottom: 2px solid #00ff88;
+      position: relative;
+      z-index: 2;
     }
+
     nav a {
+      position: relative;
       color: #00ff88;
       padding: 1em;
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.3s;
     }
+
     nav a:hover {
       background-color: #333;
     }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 0;
+      height: 4px;
+      background-color: #00ff88;
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::before {
+      width: 80px;
+      left: calc(50% - 40px);
+    }
+
     section {
       padding: 2em;
+      background-color: rgba(18, 18, 18, 0.85);
+      margin: 20px;
+      border-radius: 10px;
     }
+
     .rom-box {
       margin-top: 20px;
       border: 1px solid #444;
@@ -53,10 +84,12 @@
       border-radius: 8px;
       background-color: #1e1e1e;
     }
+
     .rom-box h3 {
       margin-top: 0;
       color: #00ff88;
     }
+
     .download-button {
       display: inline-block;
       background-color: #00ff88;
@@ -67,11 +100,13 @@
       font-weight: bold;
       margin-top: 10px;
     }
+
     .download-button:hover {
       background-color: #00cc6a;
     }
+
     footer {
-      background-color: #1f1f1f;
+      background-color: rgba(31, 31, 31, 0.85);
       color: #888;
       text-align: center;
       padding: 1em;
@@ -87,10 +122,6 @@
     <h1>Box Raiz</h1>
     <p>aim groot</p>
   </header>
-
-  <div style="text-align: center; margin-top: 10px;">
-    <img src="https://raw.githubusercontent.com/mfsistemas1/MF-devzone/main/logo.jpg" alt="Logo Box Raiz" style="max-width: 250px; border-radius: 10px;">
-  </div>
 
   <nav>
     <a href="#apps">Apps</a>
