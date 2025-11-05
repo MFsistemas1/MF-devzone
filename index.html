@@ -39,6 +39,7 @@
       border-bottom: 2px solid #00ff88;
       position: relative;
       z-index: 2;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -105,6 +106,13 @@
       background-color: #00cc6a;
     }
 
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 10px;
+    }
+
     footer {
       background-color: rgba(31, 31, 31, 0.85);
       color: #888;
@@ -128,6 +136,7 @@
     <a href="#rockchip">Rockchip</a>
     <a href="#allwinner">Allwinner</a>
     <a href="#amlogic">Amlogic</a>
+    <a href="#compartilhar">Compartilhar ROM</a>
   </nav>
 
   <section id="apps">
@@ -156,6 +165,12 @@
   <section id="amlogic">
     <h2>Amlogic</h2>
     <p>Arquivos e guias para dispositivos com chips Amlogic.</p>
+  </section>
+
+  <section id="compartilhar">
+    <h2 style="color:#00ff88;">📤 Compartilhar ROM ou App</h2>
+    <p>Use o painel abaixo para gerar blocos HTML com suas ROMs ou aplicativos personalizados.</p>
+    <iframe src="painel/painel.html"></iframe>
   </section>
 
   <footer>
